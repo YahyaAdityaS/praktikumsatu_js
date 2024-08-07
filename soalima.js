@@ -6,13 +6,12 @@ class Lingkaran {
   luas() {
     return Math.PI * Math.pow(this.jari_jari, 2);
   }
-
   keliling() {
     return 2 * Math.PI * this.jari_jari;
   }
 }
 
-class Tabung extends Lingkaran {
+class Gelas extends Lingkaran {
   constructor(jari_jari, tinggi) {
     super(jari_jari);
     this.tinggi = tinggi;
@@ -67,20 +66,17 @@ class Bola {
 }
 
 // Contoh penggunaan
-const lingkaran = new Lingkaran(5);
-console.log('Luas Lingkaran:', lingkaran.luas().toFixed(2));
-console.log('Keliling Lingkaran:', lingkaran.keliling().toFixed(2));
 
-const tabung = new Tabung(5, 10);
+const tabung = new Gelas(15, 50);
 console.log('Volume Tabung:', tabung.volume().toFixed(2));
 console.log('Luas Permukaan Tabung:', tabung.luasPermukaan().toFixed(2));
 console.log('Luas Selimut Tabung:', tabung.luasSelimut().toFixed(2));
 
-const kerucut = new Kerucut(5, 10);
+const kerucut = new Kerucut(20, 40);
 console.log('Volume Kerucut:', kerucut.volume().toFixed(2));
 console.log('Luas Permukaan Kerucut:', kerucut.luasPermukaan().toFixed(2));
 console.log('Luas Selimut Kerucut:', kerucut.luasSelimut().toFixed(2));
 
-const bola = new Bola(5);
+const bola = new Bola(30);
 console.log('Volume Bola:', bola.volume().toFixed(2));
 console.log('Luas Permukaan Bola:', bola.luasPermukaan().toFixed(2));
